@@ -217,7 +217,7 @@ for ts, buf in pcap:
 
 
         if curSPort == flowSPort:
-            currentFlow.addBytes(len(tcp.data)) # increment the number of bytes for throughput calculations
+            currentFlow.addBytes(len(tcp)) # increment the number of bytes for throughput calculations
 
         # this is for getting the first two transactions
         transactionCount, transactions = currentFlow.getTransactionInfo()
